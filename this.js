@@ -62,3 +62,4 @@ function Bfunc() {
 Bfunc();
 Bfunc.apply(a);
 Bfunc.apply(b);
+
