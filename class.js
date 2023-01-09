@@ -33,7 +33,8 @@ const tom = new User("Tom", 30);
 // 상속
 // extends 사용
 class Car {
-  constructor(color) { // {} 빈 객체 생성
+  constructor(color) {
+    // {} 빈 객체 생성
     this.color = color;
     this.wheels = 4;
   }
@@ -45,26 +46,26 @@ class Car {
   stop() {
     console.log("STOP!");
   }
-};
+}
 
 // Benz는 Car를 상속한다.
 class Benz extends Car {
-    // 오버라이딩
-    // 자식 생성자는 무조건 부모 생성자를 호출해줘야 한다. (super 사용)
-    constructor(color) { // 동일한 인자를 받아줘야함.
-        super(color); // 항상 부모 class를 상속받아야함.
-        this.navigation = 1;
-    }
-    park() {
-        console.log("PARK");
-    }
-    // 메소드 오버라이딩
-    // = 동일한 이름의 메서드가 있으면 덮어쓰기 된다.
-    stop() {
-        super.stop(); // 부모의 class의 메서드를 사용
-        console.log("OFF");
-    }
+  // 오버라이딩
+  // 자식 생성자는 무조건 부모 생성자를 호출해줘야 한다. (super 사용)
+  constructor(color) {
+    // 동일한 인자를 받아줘야함.
+    super(color); // 항상 부모 class를 상속받아야함.
+    this.navigation = 1;
+  }
+  park() {
+    console.log("PARK");
+  }
+  // 메소드 오버라이딩
+  // = 동일한 이름의 메서드가 있으면 덮어쓰기 된다.
+  stop() {
+    super.stop(); // 부모의 class의 메서드를 사용
+    console.log("OFF");
+  }
 }
 
 // const z1 = new Benz("red");
-
